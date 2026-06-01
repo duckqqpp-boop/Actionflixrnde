@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActionFlix - 기분 맞춤형 콘텐츠 추천</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 ActionFlix</h1>
+            <p>오늘의 기분에 맞는 영상을 고르고, 새로운 행동을 시작해보세요!</p>
+        </header>
+
+        <section id="step-mood" class="card active">
+            <h2>오늘의 기분은 어떠신가요?</h2>
+            <div class="grid-mood">
+                <button class="btn-mood" data-mood="lethargic">🥱 무기력함</button>
+                <button class="btn-mood" data-mood="stressed">⚡ 스트레스</button>
+                <button class="btn-mood" data-mood="bored">💬 지루함</button>
+                <button class="btn-mood" data-mood="sad">😢 슬픔 / 공허</button>
+                <button class="btn-mood" data-mood="anxious">😰 불안 / 잡생각</button>
+                <button class="btn-mood" data-mood="happy">🥳 들뜸 / 신남</button>
+            </div>
+        </section>
+
+        <section id="step-question" class="card">
+            <h2 id="question-text">지금 당신에게 필요한 것은?</h2>
+            <div id="question-options" class="grid-options">
+                </div>
+        </section>
+
+        <section id="step-result" class="card">
+            <h2>당신을 위한 맞춤 콘텐츠</h2>
+            <div id="result-container" class="grid-result">
+                </div>
+            <button id="btn-restart" class="btn-primary">처음부터 다시 하기</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
