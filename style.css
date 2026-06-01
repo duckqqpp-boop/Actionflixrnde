@@ -1,0 +1,187 @@
+/* 기본 스타일 초기화 및 시네마틱 딥 블랙 테마 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+body {
+    background-color: #141414; /* 넷플릭스 시그니처 블랙 */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px; /* PC 최적화 가로폭 */
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #E50914; /* 시그니처 레드 */
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: #999999;
+    font-size: 1.1rem;
+}
+
+/* 카드 및 섹션 공통 디자인 */
+.card {
+    background: #1f1f1f; /* 다크 그레이 카드 배경 */
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    display: none;
+    border: 1px solid #2a2a2a;
+}
+
+.card.active {
+    display: block;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+/* 6가지 기분 그리드 레이아웃 (PC 최적화 3열 2행) */
+.grid-mood {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2단계 선택지는 2열 배치 */
+    gap: 20px;
+}
+
+/* 모든 공통 버튼 스타일 */
+button {
+    background: #2b2b2b;
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 25px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #383838;
+    border-color: #E50914; /* 호버 시 레드 테두리 */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
+}
+
+/* 3단계 결과 레이아웃 */
+.grid-result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.result-item {
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 30px 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border 0.2s ease;
+}
+
+.result-item:hover {
+    border-color: #E50914;
+}
+
+.result-item h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.result-item .category {
+    font-size: 0.85rem;
+    color: #E50914; /* 카테고리 레드 강조 */
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.result-item p {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* 레드 포인트 액션 아이템 박스 */
+.action-box {
+    background: rgba(229, 9, 20, 0.15); /* 투명한 레드 배경 */
+    border-left: 4px solid #E50914;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 0 6px 6px 0;
+}
+
+.action-box strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #ff4a54; /* 밝은 레드 */
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.action-box span {
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+/* 메인 액션 및 스킵 버튼 */
+.btn-primary {
+    background: #E50914;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.05rem;
+}
+
+.btn-primary:hover {
+    background: #b80710;
+    box-shadow: 0 5px 20px rgba(229, 9, 20, 0.5);
+}
+
+.btn-skip {
+    background: #2b2b2b;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    width: 100%;
+    color: #aaa;
+}
+
+.btn-skip:hover {
+    background: #e50914;
+    color: #fff;
+}
